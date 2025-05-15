@@ -2,7 +2,7 @@ using Microsoft.Playwright;
 
 namespace learn_Playwright_CSharp_2025;
 
-public class Tests
+public class GoogleHomePage
 {
     [SetUp]
     public void Setup()
@@ -10,7 +10,7 @@ public class Tests
     }
 
     [Test]
-    public async Task Test1()
+    public async Task ValidateGoogleHomePage()
     {
         using var playwright = await Playwright.CreateAsync();
         await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
