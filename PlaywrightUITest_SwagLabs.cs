@@ -25,6 +25,13 @@ public class PlaywrightUiTestSwagLabs
         Assert.That(actualTitle, Is.Not.Null.Or.Empty);
         Assert.That(actualTitle, Is.EqualTo("Swag Labs"));
 
+        await page.FillAsync("#user-name", "standard_user");
+        await page.FillAsync("#password", "secret_sauce");
+        
+        await page.ClickAsync("#login-button");
+
+        await page.Locator("text=Products").IsVisibleAsync();
+
 
     }
 }
