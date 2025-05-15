@@ -1,0 +1,61 @@
+# Build artifacts
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider/JetBrains settings
+.idea/
+
+# Logs
+*.log
+
+# Dependency caches
+packages/
+.nuget/
+
+# Playwright browser binaries & downloads
+ms-playwright/
+playwright-report/
+playwright/.cache/
+playwright/.report/
+
+# Test results
+TestResults/
+*.trx
+
+# Screenshots & videos (optional if you save them for debugging)
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.webm
+
+# Temporary files
+*.tmp
+*.temp
+
+# Mac/Linux specific
+.DS_Store
+Thumbs.db
+
+# Windows specific
+desktop.ini
+
+# Dotnet artifacts
+project.lock.json
+project.fragment.lock.json
+*.pidb
+*.svclog
+*.pdb
+
+# Resharper files
+_ReSharper*/
