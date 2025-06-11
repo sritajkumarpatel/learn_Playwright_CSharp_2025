@@ -1,3 +1,4 @@
+using learn_Playwright_CSharp_2025.Pages;
 using Microsoft.Playwright.NUnit;
 
 namespace learn_Playwright_CSharp_2025;
@@ -23,6 +24,17 @@ public class NUnitPlaywrightSwagLabs : PageTest
         await Page.ClickAsync("#login-button");
         await Expect(Page.Locator("text=Products")).ToBeVisibleAsync();
 
+
+    }
+ 
+    [Test]
+    public async Task ValidateSwagLabsTitlePom()
+    {
+        
+        LoginPage loginPage = new LoginPage(Page);
+        ProductPage productPage = new ProductPage(Page);
+        await loginPage.Login("standard_user", "secret_sauce");
+        await productPage.VerifyPageTitle();
 
     }
 }
