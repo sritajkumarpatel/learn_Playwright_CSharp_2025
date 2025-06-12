@@ -1,10 +1,12 @@
 using learn_Playwright_CSharp_2025.Pages;
+using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
 
 namespace learn_Playwright_CSharp_2025;
 
 public class NUnitPlaywrightSwagLabs : PageTest
 {
+    
     [SetUp]
     public async Task Setup()
     {
@@ -36,5 +38,12 @@ public class NUnitPlaywrightSwagLabs : PageTest
         await loginPage.Login("standard_user", "secret_sauce");
         await productPage.VerifyPageTitle();
 
+    }
+
+    [Test]
+    public async Task LoginToSwagLabs()
+    {
+        LoginPageUpgraded loginPageUpgraded = new LoginPageUpgraded(Page);
+        loginPageUpgraded.LoginUpgraded("standard_user", "secret_sauce");
     }
 }
